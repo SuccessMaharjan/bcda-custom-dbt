@@ -14,7 +14,7 @@ select id as iD,
 		extension::json -> 0 -> 'valueCoding' -> 'display' as ms_cd_displayName,
   	extension::json -> 1 -> 'valueCoding' -> 'code' as orec_code,
 		extension::json -> 1 -> 'valueCoding' -> 'display' as orec_displayName
-from bcda_fhir_raw.coverage
+from bcda_raw.coverage
   )
   select id::text, 
   			status::text,
