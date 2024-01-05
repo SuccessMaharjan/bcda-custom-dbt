@@ -12,7 +12,7 @@ with json_flatten
 	 	address::json ->0-> 'state'  as state, 
 	 	address::json ->0-> 'postalCode' as postalCode,
 	 	extension::json ->0-> 'valueCoding'  -> 'display' as race
- 	 from bcda_raw.patient
+ 	 from bcda_fhir_raw.patient
  )
  select replace(firstName::text,'"','') as firstName,
  		replace(middleName::text,'"','') as middleName,
